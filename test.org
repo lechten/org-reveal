@@ -1,0 +1,66 @@
+#+STARTUP: showeverything
+
+# Omit some things:
+#+OPTIONS: reveal_title_slide:nil toc:nil num:nil reveal_progress:nil
+
+* Test 0, copied from org-reveal’s Readme.org
+#+ATTR_REVEAL: :frag (grow shrink roll-in fade-out none) :frag_idx (4 3 2 1 -)
+   * I will grow.
+   * I will shrink.
+   * I rolled in.
+   * I will fade out.
+   * I don't fragment.
+
+* Test 1
+  Two lists with appearing items, ~:frag (appear)~
+#+ATTR_REVEAL: :frag (appear)
+  - One
+  - Two
+
+#+ATTR_REVEAL: :frag t
+  The second list has more of this
+
+#+ATTR_REVEAL: :frag (appear)
+  - Three
+  - Four
+  - Five
+
+* Test 2
+  A list with appearing items, ~:frag (appear appear)~
+#+ATTR_REVEAL: :frag (appear appear)
+  - One
+  - Two
+
+* Test 3
+  Appearing in natural order, ~:frag (appear) :frag_idx (1 2)~
+#+ATTR_REVEAL: :frag (appear) :frag_idx (1 2)
+  - One
+  - Two
+
+* Test 4
+  Appearing in different order, ~:frag (appear) :frag_idx (2 3 1)~
+#+ATTR_REVEAL: :frag (appear) :frag_idx (2 3 1)
+   - Two
+   - Three
+   - One
+
+* Test 5
+  Appearing in different order, ~:frag (appear none appear) :frag_idx (2 - 1)~
+#+ATTR_REVEAL: :frag (appear none appear) :frag_idx (2 - 1)
+   - Two
+   - Always
+   - One
+
+* Audio test
+#+ATTR_REVEAL: :frag (appear) :audio (1.ogg 2.ogg none)
+   * I appear with audio 1.ogg.
+   * I appear with audio 2.ogg.
+   * I appear without audio.
+
+* Non-Test
+  Use of ~:frag appear :frag_idx (3 2 1)~ is not supported and raises an
+  assertion error.  Uncomment the following (in the source code) to see that.
+# #+ATTR_REVEAL: :frag appear :frag_idx (3 2 1)
+#    - Three
+#    - Two
+#    - One
