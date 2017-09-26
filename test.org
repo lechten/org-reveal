@@ -64,3 +64,17 @@
 #    - Three
 #    - Two
 #    - One
+
+* Color test without frag
+- some stuff
+    - other stuff
+    - other stuff
+        - last stuff
+
+* Color test with frag
+# Related to https://github.com/yjwen/org-reveal/issues/296
+- some stuff
+  #+ATTR_REVEAL: :frag appear
+  - other stuff
+  - other stuff
+    - last stuff
