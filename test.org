@@ -58,27 +58,28 @@
    * I appear with audio 2.ogg.
    * I appear without audio.
 
-* Src code tests
+* Source code tests
 
-** Src code without frag_idx
+** Src code without ~frag_idx~
 #+ATTR_REVEAL: :frag appear
-#+BEGIN_SRC
+#+BEGIN_SRC lisp
 (message "Hello world!")
 #+END_SRC
 
 #+ATTR_REVEAL: :frag appear
-#+BEGIN_SRC
+#+BEGIN_SRC lisp
 (message "Hello org-revel!")
 #+END_SRC
 
-** Src code with frag_idx
+** Src code with ~frag_idx~
+This requires PR#1
 #+ATTR_REVEAL: :frag appear :frag_idx 2
-#+BEGIN_SRC
+#+BEGIN_SRC lisp
 (message "Hello world!")
 #+END_SRC
 
 #+ATTR_REVEAL: :frag appear :frag_idx 1
-#+BEGIN_SRC
+#+BEGIN_SRC lisp
 (message "More to come...")
 #+END_SRC
 
